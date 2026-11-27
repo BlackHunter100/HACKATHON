@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | EduNexus </title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="app-sidebar">
+
+        <a href="index.html" class="brand">
+            <span class="brand-icon">C</span>
+            <span class="brand-name">
+                EduNexus
+            </span>
+        </a>
+
+        <div class="user-switcher">
+            <div class="user-avatar">S</div>
+
+            <div class="user-info">
+                <strong>Student Workspace</strong>
+                <span>Campus Member</span>
+            </div>
+
+            <span class="switch-icon">⌄</span>
+        </div>
+
+        <nav class="sidebar-navigation">
+
+            <span class="sidebar-heading">WORKSPACE</span>
+
+            <a href="#overview" class="sidebar-item active">
+                <span>⌂</span> Overview
+            </a>
+
+            <span class="sidebar-heading">ACADEMICS</span>
+
+            <a href="#assignments" class="sidebar-item">
+                <span>▤</span> Assignments
+            </a>
+
+            <a href="#projects" class="sidebar-item">
+                <span>◈</span> Projects
+            </a>
+
+            <a href="#syllabus" class="sidebar-item">
+                <span>▣</span> Syllabus
+            </a>
+
+            <a href="#attendance" class="sidebar-item">
+                <span>◷</span> Attendance
+            </a>
+
+            <span class="sidebar-heading">CAMPUS SERVICES</span>
+
+            <a href="#complaints" class="sidebar-item">
+                <span>⌁</span> Complaints
+            </a>
+
+            <a href="#notifications" class="sidebar-item">
+                <span>♧</span> Notifications
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <a href="#settings" class="sidebar-item">
+                <span>⚙</span> Settings
+            </a>
+
+            <div class="sidebar-user">
+                <div class="user-avatar">S</div>
+
+                <div>
+                    <strong>Student User</strong>
+                    <span>Student Account</span>
+                </div>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="app-main" id="overview">
+
+        <!-- TOPBAR -->
+        <header class="app-topbar">
+
+            <div class="breadcrumb">
+                Workspace <span>/</span> Overview
+            </div>
+
+            <div class="topbar-actions">
+
+                <button class="icon-button" id="notificationButton"
+                    aria-label="Notifications">
+                    ♧
+                </button>
+
+                <div class="topbar-avatar">S</div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PAGE INTRO -->
+        <section class="dashboard-intro">
+
+            <div>
+
+                <span class="eyebrow">
+                    <span id="currentDate">Loading date...</span>
+                </span>
+
+                <h1>Good morning, Student.</h1>
+
+                <p>
+                    Here's what's happening with your academics
+                    and campus activities.
+                </p>
+
+            </div>
+
+            
+<div class="quick-action-wrapper">
+
+    <button class="primary-btn" id="quickActionButton">
+        + Quick Action
+    </button>
+
+    <div class="quick-action-menu" id="quickActionMenu" hidden>
+
+        <button type="button" data-action="assignment">
+            + Add Assignment
+        </button>
+
+        <button type="button" data-action="project">
+            + Create Project
+        </button>
+
+        <button type="button" data-action="complaint">
+            + Submit Complaint
+        </button>
+
+    </div>
+
+</div>
+
+
+        </section>
+
+
+        <!-- OVERVIEW STATISTICS -->
+        <section class="overview-grid">
+
+            <article class="overview-card">
+
+                <div class="overview-card-top">
+                    <span>Assignments</span>
+                    <span class="overview-icon">▤</span>
+                </div>
+
+                <h2 id="assignmentCount">--</h2>
+
+                <p>Active assignments</p>
+
+            </article>
+
+
+            <article class="overview-card">
+
+                <div class="overview-card-top">
+                    <span>Projects</span>
+                    <span class="overview-icon">◈</span>
+                </div>
+
+                <h2 id="projectCount">--</h2>
+
+                <p>Ongoing projects</p>
+
+            </article>
+
+
+            <article class="overview-card">
+
+                <div class="overview-card-top">
+                    <span>Attendance</span>
+                    <span class="overview-icon">◷</span>
+                </div>
+
+                <h2 id="attendancePercentage">--</h2>
+
+                <p>Overall attendance</p>
+
+            </article>
+
+
+            <article class="overview-card">
+
+                <div class="overview-card-top">
+                    <span>Complaints</span>
+                    <span class="overview-icon">⌁</span>
+                </div>
+
+                <h2 id="complaintCount">--</h2>
+
+                <p>Active complaints</p>
+
+            </article>
+
+        </section>
+
+
+        <!-- MAIN DASHBOARD GRID -->
+        <section class="dashboard-content-grid">
+
+            <!-- ASSIGNMENTS -->
+            <div class="dashboard-panel" id="assignments">
+
+                <div class="panel-heading">
+
+                    <div>
+                        <h2>Upcoming Assignments</h2>
+                        <p>Keep track of your academic deadlines.</p>
+                    </div>
+
+                    <a href="#assignments" class="text-link">
+                        View all →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ATTENDANCE -->
+            <div class="dashboard-panel" id="attendance">
+
+                <div class="panel-heading">
+
+                    <div>
+                        <h2>Attendance Overview</h2>
+                        <p>Monitor your attendance records.</p>
+                    </div>
+
+                    <a href="#attendance" class="text-link">
+                        Details →
+                    </a>
+
+                </div>
+
+                <div class="attendance-placeholder">
+
+                    <div class="attendance-circle">
+                        <span>--</span>
+                    </div>
+
+                    <p>Attendance data not loaded yet.</p>
+
+                </div>
+
+            </div>
+            <!-- PROJECTS -->
+            <div class="dashboard-panel" id="projects">
+
+                <div class="panel-heading">
+
+                    <div>
+                        <h2>My Projects</h2>
+                        <p>Track your ongoing academic projects.</p>
+                    </div>
+
+                    <a href="#projects" class="text-link">
+                        View all →
+                    </a>
+
+                </div>
+
+                <div id="projectFormContainer" hidden>
+                    <form id="projectForm">
+                        <h3>Create New Project</h3>
+
+                        <label for="projectTitle">Project Title</label>
+                        <input type="text" id="projectTitle" placeholder="Enter project title" required>
+
+                        <label for="projectDescription">Description</label>
+                        <textarea id="projectDescription" placeholder="Describe your project" required></textarea>
+
+                        <label for="projectDeadline">Deadline</label>
+                        <input type="date" id="projectDeadline" required>
+
+                        <button type="submit" class="primary-btn">Create Project</button>
+                        <button type="button" id="cancelProjectForm">Cancel</button>
+                    </form>
+                </div>
+
+                <div id="projectList"></div>
+
+                <div class="empty-state" id="projectEmptyState">
+                    <div class="empty-icon">◈</div>
+                    <h3>No projects created</h3>
+                    <p>Your projects will appear here.</p>
+                </div>
+
+            </div>
+
+
+            <!-- SYLLABUS -->
+            <div class="dashboard-panel" id="syllabus">
+
+                <div class="panel-heading">
+
+                    <div>
+                        <h2>My Syllabus</h2>
+                        <p>Access your academic course materials.</p>
+                    </div>
+
+                    <a href="#syllabus" class="text-link">
+                        Explore →
+                    </a>
+
+                </div>
+
+                <div class="empty-state">
+                    <div class="empty-icon">▣</div>
+
+                    <h3>No syllabus available</h3>
+
+                    <p>
+                        Course materials will appear here
+                        when uploaded.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- COMPLAINTS -->
+            <div class="dashboard-panel" id="complaints">
+
+                <div class="panel-heading">
+
+                    <div>
+                        <h2>Campus Complaints</h2>
+                        <p>Report and track campus issues.</p>
+                    </div>
+
+                    <a href="#complaints" class="text-link">
+                        View all →
+                    </a>
+
+                </div>
+
+                <div class="empty-state">
+                    <div class="empty-icon">⌁</div>
+
+                    <h3>No complaints loaded</h3>
+
+                    <p>
+                        Your submitted campus complaints
+                        will appear here.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- NOTIFICATIONS -->
+            <div class="dashboard-panel" id="notifications">
+
+                <div class="panel-heading">
+
+                    <div>
+                        <h2>Recent Notifications</h2>
+                        <p>Stay updated with campus activities.</p>
+                    </div>
+
+                    <a href="#notifications" class="text-link">
+                        View all →
+                    </a>
+
+                </div>
+
+                <div class="empty-state">
+                    <div class="empty-icon">♧</div>
+
+                    <h3>No new notifications</h3>
+
+                    <p>
+                        Updates and reminders will appear here.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer class="dashboard-footer">
+            EduNexus · Smarter campus management.
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="js/Script.js"></script>
+
+</body>
+</html>
+
+
